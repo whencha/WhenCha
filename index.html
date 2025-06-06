@@ -1,149 +1,109 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WhenCha — чай як стан</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhenCha</title>
+
+  <!-- Подключение шрифтов -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/tavitaj" rel="stylesheet">
+
   <style>
     body {
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fdfaf5;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      padding: 2rem;
-      box-sizing: border-box;
+      padding: 40px 20px;
+      background: #fffdf8;
+      color: #1c1c1c;
     }
 
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .lang-switch button {
-      background: none;
-      border: none;
-      font-size: 1rem;
-      margin-left: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #444;
-    }
-
-    .content {
-      max-width: 800px;
-      width: 100%;
-      text-align: left;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    .brand-title {
+      font-family: 'Tavitaj', serif;
+      font-size: 2.8em;
       text-align: center;
-      font-weight: 400;
+      margin-bottom: 10px;
     }
 
-    p {
+    .subtitle {
+      font-size: 1.1em;
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.6;
-      margin-bottom: 1.2rem;
     }
 
-    .values, .footer {
-      margin-top: 2rem;
+    .section-title {
+      font-family: 'Tavitaj', serif;
+      font-size: 1.6em;
+      margin-top: 40px;
+      text-align: center;
     }
 
-    .contact-links {
-      margin-top: 2rem;
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
+    .values {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.05em;
+      line-height: 1.6;
     }
 
-    .contact-links a {
+    .values ul {
+      padding-left: 20px;
+    }
+
+    .contacts {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contacts a {
+      display: inline-block;
+      margin: 8px 12px;
+      color: #1c1c1c;
       text-decoration: none;
-      color: #fff;
-      background-color: #333;
-      padding: 0.6rem 1.2rem;
+      border: 1px solid #1c1c1c;
+      padding: 8px 14px;
       border-radius: 4px;
-      font-size: 0.9rem;
-      transition: background 0.3s ease;
+      font-weight: 500;
+      transition: 0.3s ease;
     }
 
-    .contact-links a:hover {
-      background-color: #555;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
+    .contacts a:hover {
+      background-color: #1c1c1c;
+      color: #fffdf8;
     }
   </style>
 </head>
 <body>
-  <div class="lang-switch">
-    <button onclick="setLang('uk')">UA</button>
-    <button onclick="setLang('en')">EN</button>
+
+  <div class="brand-title">WhenCha — чай як стан</div>
+
+  <div class="subtitle">
+    Ми часто не помічаємо, як найважливіші моменти життя відбуваються з чашкою в руках.<br><br>
+    Кава — перед тим, як усе змінити. Чашка чаю на кухні, де пахне хлібом і сонцем. Матча — щоб набратися сил у новому дні...<br><br>
+    Цей бренд — не про ідеальний стиль життя. Він — про справжнє. І з цього почався мій шлях.
   </div>
 
-  <div class="content" id="uk">
-    <h1>WhenCha — чай як стан</h1>
-    <p>Ми часто не помічаємо, як найважливіші моменти життя відбуваються з чашкою в руках.</p>
-    <p>Кава — перед тим, як усе змінити. Чашка чаю на кухні, де пахне хлібом і сонцем. Матча — щоб набратися сил у новому дні...</p>
-    <p>Цей бренд — не про ідеальний стиль життя. Він — про справжнє. І з цього почався мій шлях.</p>
+  <div class="section-title">Цінності</div>
 
-    <p><strong>Цінності:</strong><br>
-      • Повільність — щоб почути себе<br>
-      • Зрілість — з любов’ю до себе й своєї історії<br>
-      • Дім і світло — не як місце, а як відчуття<br>
-      • Щирість і природність<br>
-      • Прийняття — болю, радості, змін<br>
-      • Увага до деталей — бо саме в них живе справжнє
-    </p>
-
-    <div class="contact-links">
-      <a href="mailto:contact@whencha.com">Email</a>
-      <a href="https://www.instagram.com/whencha.ua" target="_blank">Instagram</a>
-    </div>
+  <div class="values">
+    <ul>
+      <li>Повільність — щоб почути себе</li>
+      <li>Зрілість — з любов’ю до себе й своєї історії</li>
+      <li>Дім і світло — не як місце, а як відчуття</li>
+      <li>Щирість і природність</li>
+      <li>Прийняття — болю, радості, змін</li>
+      <li>Увага до деталей — бо саме в них живе справжнє</li>
+    </ul>
   </div>
 
-  <div class="content" id="en" style="display: none;">
-    <h1>WhenCha — tea as a state</h1>
-    <p>We often don’t notice how the most important moments of life happen with a cup in hand.</p>
-    <p>Coffee — before everything changes. A cup of tea in the kitchen where it smells like bread and sun. Matcha — to gain strength in a new day...</p>
-    <p>This brand isn’t about a perfect lifestyle. It’s about what’s real. And that’s where my journey began.</p>
-
-    <p><strong>Values:</strong><br>
-      • Slowness — to hear yourself<br>
-      • Femininity — alive, deep, unmasked<br>
-      • Maturity — with love for yourself and your story<br>
-      • Home & light — not as a place but as a feeling<br>
-      • Sincerity and naturalness<br>
-      • Acceptance — of pain, joy, change<br>
-      • Attention to details — because that’s where the truth lives
-    </p>
-
-    <div class="contact-links">
-      <a href="mailto:contact@whencha.com">Email</a>
-      <a href="https://www.instagram.com/whencha.ua" target="_blank">Instagram</a>
-    </div>
+  <div class="section-title">Контакти</div>
+  <div class="contacts">
+    <a href="mailto:whencha.contact@gmail.com">whencha.contact@gmail.com</a>
+    <a href="https://www.instagram.com/whencha.rituals" target="_blank">Instagram</a>
   </div>
 
-  <script>
-    function setLang(lang) {
-      document.getElementById('uk').style.display = (lang === 'uk') ? 'block' : 'none';
-      document.getElementById('en').style.display = (lang === 'en') ? 'block' : 'none';
-    }
-  </script>
 </body>
 </html>
