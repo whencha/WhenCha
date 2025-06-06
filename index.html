@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whencha</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fefdf9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #777;
+    }
+
+    .buttons a {
+      margin: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      color: white;
+      background-color: #5c4437;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .language-switcher button {
+      background: none;
+      border: none;
+      color: #5c4437;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0 0.5rem;
+    }
+
+    .philosophy {
+      max-width: 600px;
+      margin-top: 2rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="language-switcher">
+    <button onclick="switchLanguage('uk')">UA</button> | 
+    <button onclick="switchLanguage('en')">EN</button>
+  </div>
+
+  <h1>Whencha</h1>
+  <div class="subtitle" id="tagline">Час бути справжньою</div>
+
+  <div class="buttons">
+    <a href="mailto:contact@whencha.com">Email</a>
+    <a href="https://www.instagram.com/whencha.ua" target="_blank">Instagram</a>
+  </div>
+
+  <div class="philosophy" id="philosophy">
+    Ми часто не помічаємо, як найважливіші моменти життя відбуваються з чашкою в руках.<br><br>
+    Цей чай — не про товар. Він — про стан.<br>
+    Про теплі паузи, в яких можна повернутися до себе.<br><br>
+    Нехай у твоєму дні буде хоча б 5 хвилин, в яких є лише ти, тиша і смак.
+  </div>
+
+  <script>
+    const texts = {
+      uk: {
+        tagline: "Час бути справжньою",
+        philosophy: `Ми часто не помічаємо, як найважливіші моменти життя відбуваються з чашкою в руках.<br><br>
+        Цей чай — не про товар. Він — про стан.<br>
+        Про теплі паузи, в яких можна повернутися до себе.<br><br>
+        Нехай у твоєму дні буде хоча б 5 хвилин, в яких є лише ти, тиша і смак.`
+      },
+      en: {
+        tagline: "A moment to be real",
+        philosophy: `We often don’t notice how the most important moments of life happen with a cup in hand.<br><br>
+        This tea is not about the product. It’s about the state.<br>
+        About warm pauses where you return to yourself.<br><br>
+        May there be at least 5 minutes in your day where it’s just you, silence, and taste.`
+      }
+    }
+
+    function switchLanguage(lang) {
+      document.getElementById('tagline').innerHTML = texts[lang].tagline;
+      document.getElementById('philosophy').innerHTML = texts[lang].philosophy;
+    }
+  </script>
+
+</body>
+</html>
